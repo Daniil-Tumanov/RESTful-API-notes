@@ -41,7 +41,7 @@ class noteController extends Controller
         return response()->json(['status code'=>201, 'status text:'=>'View note', 'Note'=>$notes], 200);
     }
 
-    public function deleteDish($id){
+    public function deleteNote($id){
         $notes = Notes::find($id);
         if(is_null($notes)){
             return response()->json(['status code' => 404, 'status text' => 'Note not found', 'body'=>'message: Note not found'], 404);
